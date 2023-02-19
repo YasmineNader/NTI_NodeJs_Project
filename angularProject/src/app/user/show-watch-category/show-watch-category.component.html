@@ -1,0 +1,28 @@
+<img src="assets/images/category.jpg" class="categImg" alt="">
+
+
+
+
+  <div class="container ConCat">
+<div *ngIf="categoryItems!='' else other_content" >
+    <div class="row row-cols-3  justify-content-around ">
+  
+    
+    <div *ngFor="let category of categoryItems">
+  
+    
+  <div class="wcard"  >
+      <img src="http://localhost:3000/images/{{ category.image }}" class="card-img-top watchColl" alt="..." >
+      <div class="card-body" style="color: white;">
+        <h6 class="card-title price">{{ category.price }} LE</h6>
+        <a routerLink="/User/AddCarts/{{ category._id }}" class="btn  cardButton">Order</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div> 
+
+
+<ng-template #other_content><div style="text-align: center; border: 1px solid gray; background-color: lightgray;"> There is No Available Products Now.</div></ng-template>
+</div> 
+

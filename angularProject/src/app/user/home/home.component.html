@@ -1,0 +1,90 @@
+<div class="imageHome" >
+  <img src="assets/images/30.jpg" alt="image" width="100%" height="600px">
+
+  <div class="container imageText">
+<h4>Luxury Watches</h4>
+<p >
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+Officiis sapiente, earum dicta doloremque numquam molestias,
+voluptas soluta dolorem optio ex maiores.Culpa aliquid id 
+amet illum quasi accusamus consequatur.</p>
+<a (click)="downPage()" class="btn imgbtn">Shop Now</a>
+  </div>
+</div>
+
+<div class="container" >
+<div class="row justify-content-around catSection">
+
+  <div class="text-center catContainer "  >
+    <img src="assets/images/men.jpg" class="rounded imgCat" alt="Men category" >
+    <h3 class="textCat" >Men's Watch</h3>
+    <a  routerLink="/User/products/Men" class="btn  catBtn">Shop Now</a>
+  </div>
+  <div class="text-center catContainer " >
+    <img src="assets/images/women.jpg" class="rounded imgCat" alt="Women category"  >
+    <h3 class="textCat">Women's Watch</h3>
+    <a  routerLink="/User/products/Women" class="btn  catBtn">Shop Now</a>
+
+  </div>
+  <div class="text-center catContainer" >
+    <img src="assets/images/kid.jpg" class="rounded imgCat" alt="Kid category">
+    <h3 class="textCat">Kid's Watch</h3>
+    <a  routerLink="/User/products/Kids" class="btn  catBtn">Shop Now</a>
+
+  </div>
+
+</div>
+
+</div>
+<div  class="brands" >
+  <img src="assets/images/16.jpg" alt="image" class="brandImg" >
+  <div class="brandsText">
+<h3>Our Brands</h3>
+<p class="row brandparag" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum dicta laborum molestiae autem expedita iure numquam, fugiat beatae qui deserunt nihil natus aliquam obcaecati saepe quibusdam modi porro laboriosam eaque.</p>
+<hr >
+</div>
+<div class="logo">
+<img src="assets/images/rolex-logo.png"  class="logoImg">
+</div>
+</div>
+
+<div class="container" id="products">
+
+  <div class="row row-cols-3  justify-content-around ">
+
+  
+  <div *ngFor="let singleinfo of watchesData">
+
+  
+<div class="wcard"  >
+    <img src="http://localhost:3000/images/{{ singleinfo.image }}" class="card-img-top watchColl" alt="..." >
+    <div class="card-body" style="color: white;">
+      <!-- <h5 class="card-title">{{ singleinfo.name }} For {{singleinfo.category }}</h5> -->
+      <!-- <p class="card-text">This is a wider card with supporting text.</p> -->
+      <h6 class="card-title price">{{ singleinfo.price }} LE</h6>
+      <a routerLink="/User/AddCarts/{{ singleinfo._id }}" class="btn cardButton">Order</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="omega">
+
+  <div>
+
+  
+<img src="assets/images/15.png" alt="" class="omegaImg">
+</div>
+<div class="logOmg">
+<img src="assets/images/omega-logo1.png" class="omegaLogo">
+</div>
+<a (click)="topPage()" class="btn  imgbtn btnlogo">Shop Now</a>
+</div>
+
+
+
+
+
+

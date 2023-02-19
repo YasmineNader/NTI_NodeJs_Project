@@ -1,0 +1,131 @@
+<section>
+    
+<div class="invCon">
+   <div class="invTo" >
+    Invoice To :
+   </div>
+   <div id ="nameInv">
+    {{ UserData?.name }}
+</div>
+   <div id ="addr" >
+    {{ UserData?.address }}
+</div>
+<div>
+</div>
+    <div class="invIcon">
+        <div class="invConIcon">
+        <img src="assets/images/watchIcon.png" class="invIconImg">
+        <span class="invName">Watch Brand</span>
+    </div>
+        <p class="invoiceText">INVOICE</p>
+        <div class="invoiceData">
+
+        <div>
+            <span>Invoice#</span>   <span class="invoiceID">{{ information?._id }}</span>
+        </div>
+        
+        <div>
+            <span>Date</span>   <span class="invoiceDate">{{ information?.createdAt | date: 'd-MM-yyyy' }}</span>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<div class="container">
+
+
+<table class="table invTable" >
+    <thead class="thead-dark" style="background-color: #efefef;">
+      <tr>
+        <th scope="col">NO</th>
+        <th scope="col">Name</th>
+        <th scope="col">Color</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of userOrder;let index = index">
+        <th scope="row">{{ index+1 }}</th>
+        <td>{{ item?.name }}</td>
+        <td>{{ item?.color }}</td>
+        <td>{{ item?.quantity }}</td>
+        <td>{{ item?.price }}</td>
+        <td>{{ item?.amount }}</td>
+        
+
+      </tr>
+    </tbody>
+  </table>
+</div> 
+  
+<!-- <div class="row" style="justify-content: center;">
+    <div class="col-6">
+        <p>Thank You For Dealing With Us </p>
+
+    </div>
+
+    <div class="col-4">
+        <div style="width: 300px;height: 150px;background-color: #d1a318;">
+            
+            <div style="width: 300px;height: 100px;background-color: #121d2a;">
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+ -->
+<div>
+
+
+ <div class="container">
+    <p style="font-weight: bold;">Thank You For Dealing With Us </p>
+</div>
+ <div style="float: right;margin-top: -32px;">
+    
+
+        <div class="yelldiv">
+            <span id="tax">Tax:</span>
+
+            <span id="invprice">{{ information.totalprice }}</span>
+            
+            <span id="sub">Sub Total:</span>
+            <span id="taxNum">0.00%</span>
+            <div class="blueDiv">
+            
+                <span class="priceBlue">Total Price:</span>
+                <span class="priceNum">{{ information.totalprice }} EGP</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container" style="margin-top: 50px;">
+
+    <span style="font-weight: bold;">Payment Info:</span>
+    <div>
+        <span>Account # :</span> <span style="margin-left: 20px">{{ UserData._id }} </span>
+    </div>
+    <div>
+    <span>A/C Name :</span> <span style="margin-left: 20px">{{ UserData.name}} </span>
+</div>
+    </div>
+
+    <div  class="container termCon">
+
+    <span style="font-weight: bold;">Terms & Conditions:</span>
+    <P style="width: 50%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, temporibus maxime non culpa dolorem dolorum aliquam earum saepe, voluptatibus esse repellat laboriosam molestias eos reprehenderit fuga iusto id quisquam accusamus!</P>
+  
+    </div>
+    <div style="text-align: right;">
+        <a (click)="print()" class="btn btn-dark printBTN" >Print</a>
+    </div>
+    
+</section>

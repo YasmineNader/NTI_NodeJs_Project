@@ -1,0 +1,110 @@
+<!-- <div class="container my-5">
+
+    <div *ngFor="let order of orderData" class="row">
+
+    
+    <div *ngFor="let product of order.products" class="col-8 cartItem">
+
+    <div class="cartImg">
+    <img src="http://localhost:3000/images/{{ product?.image }}" alt="" width="50px">
+
+    </div>
+
+    <div id="cartName">
+        {{ product.name }}
+
+    </div>
+    <div id="cartColor">
+      Color: {{ product.color }}
+
+    </div>
+    <div id="cartBrand">
+        {{ product.brand }}
+
+    </div>
+    
+    <div id="cartPrice">
+        {{ product.price }} EGP
+
+    </div>
+
+    <div>
+
+        {{ product.quantity }}
+    </div>
+    <div>
+
+        {{ product.amount }}
+    </div>
+    </div>
+
+    
+       
+</div> -->
+<!-- <a  *ngIf="orders!=''"  class="btn btn-dark my-3" routerLink="/User/orders" (click)="UserCartOrder()">Create Order</a> -->
+
+<!-- </div> -->
+
+
+
+
+<div class="container">
+    <table  class="table table-striped table-bordered text-center mt-3">
+        <thead>
+            <th> image</th>
+            <th>Name</th>
+            <th>Color</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Amount</th>
+            <th>Brand</th>
+
+
+            <!-- <th>Order Status</th> -->
+        
+    
+        </thead>
+        <tbody *ngFor="let order of orderData">
+            
+            <tr *ngFor="let product of order?.products">
+  
+     <td> 
+
+    <img src="http://localhost:3000/images/{{ product?.image }}" alt="" width="50px">
+
+    </td>
+
+                   
+         
+
+                    <td>{{ product?.name}}</td>
+
+                    <td>{{ product?.color}}</td>
+
+                    <td>{{ product?.quantity}}</td>
+                    <td>{{ product?.price}}</td>
+
+                   
+                    <td>{{ product?.amount}}</td>
+               
+                    <td>{{ product?.brand}}</td>
+
+
+
+ 
+     <!-- <td>{{ order.orderStatus }}</td> -->
+
+
+                
+                
+            
+                    
+                                      
+    </tr> 
+        </tbody>
+    </table>
+     <button class="btn btn-dark mb-3" routerLink="/home">Back</button>
+     <div class="invConBtn">
+     <a  class="btn  mb-3 invBtn" href="User/bill/{{ OrderID }} ">Invoice</a>
+    </div>
+      </div> 

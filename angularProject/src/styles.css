@@ -1,0 +1,631 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.bg-dark {
+  background-color:  #121d2a !important;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background-color:  #121d2a ;
+}
+.imageHome{
+   position: relative;
+   
+}
+.imageText{
+  position: absolute;
+  bottom: 220px;
+  left: 60px;
+  color: white;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 40%;}
+.imgbtn,.invBtn{
+  background-color:#ab521a;
+  border-color:#ababab;
+  color: white;
+}
+.invBtn{
+  width:238px;
+}
+.imgbtn:hover,.catBtn:hover,.invBtn:hover{
+  background-color:#d65d11;
+  border-color:#ababab;
+  color: white;
+
+}
+.catSection,.regCont{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.catContainer{
+ width:300px;
+ position: relative;
+ opacity: 1;
+ transition: .5s ease ;
+ -webkit-transition: .5s ease;
+ -moz-transition: .5s ease;
+ -ms-transition: .5s ease;
+ -o-transition: .5s ease;
+}
+
+.catContainer:hover .imgCat{
+ opacity: 0.5;
+ transition: .5s ease;
+ 
+}
+.catContainer:hover .textCat{
+ display: none;
+ opacity: 0.5;
+ transition: .5s ease;
+ -webkit-transition: .5s ease;
+ -moz-transition: .5s ease;
+ -ms-transition: .5s ease;
+ -o-transition: .5s ease;
+}
+
+.catContainer:hover .catBtn{
+  display: block;
+  transition: .5s ease;
+
+}
+
+.catBtn{
+    position: absolute;
+    bottom: 50px;
+    left: 110px;
+    background-color:#ab521a;
+    border-color:#ababab;
+    color: white;
+    display: none;
+}
+
+
+.imgCat{
+ position: relative;
+ filter: brightness(50%);
+ -webkit-filter: brightness(50%);
+ width:300px ;
+ height:400px ;
+ 
+}
+
+
+
+.textCat{
+  position: absolute;
+  bottom: 190px;
+  /* left: 95px; */
+  width: 100%;
+  margin: auto;
+  color: white;
+}
+
+/* footer{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  
+} */
+.brands{
+  position:relative;
+  margin-bottom: 60px;
+}
+.omega{
+  position:relative;
+ 
+
+}
+.brandImg,.omegaImg{
+height: 650px;
+width: 100%;
+
+}
+.categImg{
+  width: 100%;
+  height: 400px;
+}
+
+
+.brandsText{
+  text-align:center;
+  position:absolute ;
+  top:20px ;
+  color: white;
+
+}
+.brandparag{
+  width: 40%;
+  margin: auto;
+}
+hr{
+  width: 70%;
+  margin: auto;
+}
+#quantity{
+
+text-align: center;
+width: 40%;
+
+}
+.logo{
+  position:absolute ;
+  bottom: 0px;
+}
+.logOmg{
+  position:absolute ;
+  top: 20px;
+  left: 10px;
+}
+.logoImg,.omegaLogo{
+  width: 200px;
+}
+.dropdown-menu[data-bs-popper]{
+  right:0px;
+  left:unset;
+}
+.btnlogo{
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.watchColl{
+transition: transform .5s ease;
+max-height: 100%;
+max-width: 100%;
+width: auto;
+height: auto;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+}
+.watchColl:hover{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+.wcard{
+  background-color:#121d2a ;
+   overflow: hidden; 
+   position: relative;
+   height: 300px;
+   margin-bottom: 60px;
+}
+
+.contMiddle{
+
+margin-top: 142px;
+
+}
+.textcat{
+  font-family:fantasy;
+  /* font-weight: bold; */
+/* font-style: italic; */
+  font-size: larger;
+}
+
+.cardButton{
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background-color:#ab521a;
+  border-color:#ababab;
+  color: white;
+}
+.cardButton:hover{
+  background-color:#d65d11;
+  border-color:#ababab
+}
+.price{
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+}
+
+.leftSide{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px;
+  background-image: url('assets/images/clock1.jpg'); 
+  background-size: cover; 
+}
+
+.leftSideAdmin{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px;
+  background-image: url('assets/images/adminLogin.jpg'); 
+  background-size: cover; 
+}
+
+.rightSide{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px;
+  background-color: #121d2a;
+  position: relative;
+}
+
+.rightSidePass{
+  float: left;
+  width: 50%;
+  /* padding: 10px; */
+  height: 500px;
+  position: relative;
+}
+
+
+.leftSidePass{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 500px;
+  /* background-image: url('assets/images/lock1.jpg'); 
+  background-size: cover; 
+  background-repeat: no-repeat; */
+}
+
+.loginSection{
+  width: 800px; 
+  height: 500px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.loginBtn{
+  background-color:#ab521a;
+  border-color:#ababab;
+  float:right;
+  color: white;
+}
+
+.cartBtn{
+  background-color:#ab521a;
+  border-color:#ababab;
+  margin-right: 10px;
+  color: white;
+
+}
+.registerBtn{
+  background-color:#ab521a;
+  border-color:#ababab;
+  color: white;
+  
+ 
+}
+.loginBtn:hover,.registerBtn:hover,.cartBtn:hover{
+  background-color:#d65d11;
+  border-color:#ababab;
+  color: white;
+}
+.regForm{
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  background-color: #121d2a;
+  border-radius: 0 0 25px 25px;
+  -webkit-border-radius: 0 0 25px 25px;
+  -moz-border-radius: 0 0 25px 25px;
+  -ms-border-radius: 0 0 25px 25px;
+  -o-border-radius: 0 0 25px 25px;
+}
+.sign{
+  margin: auto;
+   width: 50%;
+   text-align: center;
+   color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 200px;
+ 
+}
+.signText{
+  position: absolute;
+  bottom: 50%;
+  text-align: center;
+  color: white;
+  width: 100%;
+  margin: 0px;
+}
+.signImageCont{
+  position: relative;
+  width: 50%;
+  margin: auto;
+}
+
+.signImage{
+ display: block;
+ width: 100%;
+ filter: brightness(0.5);
+ height: 220px;
+ border-radius:25px 25px 0 0;
+ -webkit-border-radius:25px 25px 0 0;
+ -moz-border-radius:25px 25px 0 0;
+ -ms-border-radius:25px 25px 0 0;
+ -o-border-radius:25px 25px 0 0;
+
+}
+
+.divRegisterBtn{
+  text-align: right;
+}
+.ConCat{
+  margin-top: 60px;
+}
+
+
+#allContainer {
+  min-height: 100%;
+  position: relative;
+}
+
+#footer {
+  background: #121d2a!important;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height:3.5;
+  /* margin-bottom: -60px; */
+}
+
+
+/* #passwImg{
+
+width:200px;
+
+} */
+
+#passcont{
+  text-align: right;
+}
+
+#info{
+  height: 100%;
+  /* text-align: right; */
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.passCon{
+
+  padding-top: 150px;
+}
+#infoImg,#passwImg{
+  width:150px;
+}
+.adminShow{
+
+  text-align: center;
+
+
+}
+
+.cartImg{
+  border: 1px solid #e2e2e2;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.cartItem{
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#cartName{
+
+  position: absolute;
+  left: 18%;
+  top: 0%
+
+}
+#cartColor{
+
+  position: absolute;
+    left: 18%;
+    top: 73%;
+
+
+}
+#cartBrand{
+
+  position: absolute;
+  left: 18%;
+  top: 20%;
+  color: #aaaaaa;
+}
+
+#cartPrice{
+  color: #1c4b82;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 30%;
+  right: 30%;
+}
+
+
+
+.sinCart tbody, .sinCart td, .sinCart tfoot, .sinCart th, .sinCart thead, .sinCart tr {
+
+
+  border-style: none;
+}
+ 
+
+.cartIcon{
+  display: inline-block;
+  border: 1px solid #eae8e8;
+  margin-right: 10px;
+  padding: 2px;
+  background: #fcfbfb;
+}
+
+
+#deleteBTN{
+  border: none;
+  background: transparent;
+  padding: 0px;
+}
+
+.invConBtn{
+  float:right;
+}
+
+.invCon{
+  background-color: #121d2a;
+  width:95%;
+  height: 280px;
+}
+.invIcon{
+  background-color: #d1a318;
+  width:60%;
+  height: 250px;
+  position:relative;
+}
+.invConIcon{
+  position: absolute;
+  top: 20%;
+  right: 53%;
+}
+.invIconImg{
+  width: 35px;
+}
+.invName{
+  font-weight: bold; 
+  padding-left: 7px;
+}
+.invoiceText{
+  position: absolute;
+   left: 30%;
+   top: 30%;
+   font-size: 60px;
+   color: white;
+}
+.invoiceData{
+  position: absolute;
+  bottom: 18%;
+  left: 31%;
+  font-weight: 600;
+}
+.invoiceID{
+  margin-left: 25px;
+}
+.invoiceDate{
+  margin-left: 53px;
+}
+.invTo{
+
+  color:white;
+   position: absolute;
+   top: 12%;
+   left: 68%;
+   font-size: 20px;
+}
+
+#nameInv{
+  color: white;
+  position: absolute;
+  top: 17%;
+  left: 68%;
+  width: 19%;
+  font-size: 15px;
+}
+
+#addr{
+  color: white;
+  position: absolute;
+  top: 22%;
+  left: 68%;
+  width: 19%;
+  font-size: 12px;
+}
+
+.invTable{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 45px;
+}
+.yelldiv{
+  width: 300px;
+  height: 120px;
+  background-color: #d1a318; 
+     position: relative;
+}
+#tax{ 
+position: absolute;
+color: white;
+z-index: 5;
+top: 35%;
+left: 5%;font-weight: bold;
+}
+#invprice{
+  position: absolute;
+            color: white;
+            z-index: 5;
+            top: 10%;
+            right: 13%;font-weight: bold;
+}
+#sub{
+  position: absolute;
+            color: white;
+            z-index: 5;
+            top: 10%;
+            left: 5%;font-weight: bold;
+}
+#taxNum{
+  position: absolute;
+            color: white;
+            z-index: 5;
+            top: 35%;
+            right: 10%;font-weight: bold;
+}
+.blueDiv{
+  width: 300px;
+  height: 80px;
+  background-color: #121d2a;
+  position: absolute;top: 0%;
+}
+.priceBlue{
+  color: white;
+                position: absolute;
+                bottom: -40%;
+                left: 5%;font-weight: bold;
+}
+.priceNum{
+  color: white;
+                position: absolute;
+                bottom: -40%;
+                right: 5%;font-weight: bold;
+}
+.printBTN{
+  width: 15%;
+        margin-top: -60px;
+        margin-right: 35px;
+        background-color: #121d2a;
+}
+
+.termCon{
+  clear: both;
+  /* margin-top: 25px; */
+  margin-top: 50px;
+  padding-bottom: 25px;
+}

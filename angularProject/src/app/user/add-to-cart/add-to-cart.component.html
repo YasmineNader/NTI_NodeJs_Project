@@ -1,0 +1,107 @@
+<div class="container contMiddle ">
+  <div *ngIf="msg">
+    <div class="alert alert-secondary" style="text-align: center;margin-left: 100px; " role="alert">{{ msg }}</div>
+
+    </div>
+<div class="row">
+<div class="col-5">
+  <div class="textcat">
+    {{ productData?.name }} / {{  productData?.category  }}
+  </div>
+  <div class="textcat">
+  Brand : {{ productData?.brand }}
+</div>
+
+<div class="textcat">
+  Price : {{  productData?.price }}
+</div>
+    <form [formGroup]="orderForm" (ngSubmit)="userorders()">
+      <!-- <div style="text-align: right;">
+    <img src="http://localhost:3000/images/{{ productData.image }}" alt="" style="width: 25%;background-color: #f0efef;">
+  </div> -->
+
+
+    <fieldset disabled>
+        <div class="mb-3">
+          <!-- <label for="name" class="form-label">Product Name</label> -->
+          <input type="hidden" class="form-control" id="name" formControlName="name"  >
+        </div>
+        <div class="mb-3">
+          <!-- <label for="price" class="form-label">Price</label> -->
+          <input type="hidden" class="form-control" id="price" formControlName="price" >
+        </div>
+        <div class="mb-3">
+          <!-- <label for="category" class="form-label">Category</label> -->
+          <input type="hidden" class="form-control" id="category" formControlName="category" >
+        </div>
+    </fieldset>
+    
+    <div class="mb-3">
+      <label for="quantity" class="form-label">Quantity</label>
+      <input type="number" class="form-control" id="quantity" formControlName="quantity" min="1">
+      <div class="alert alert-danger mt-2 w-50 p-1" *ngIf="isSubmitted || (quantity?.invalid && (quantity?.dirty || quantity?.touched))">
+        <ul>
+            <li *ngIf = "quantity?.errors?.required">Quantity is Required</li>
+        </ul>
+    </div>
+    </div>
+    
+    <!-- <div class="mb-3">
+      <label for="color" class="form-label">Color</label>
+      <input type="text" class="form-control" id="color" formControlName="color">
+      <div class="alert alert-danger mt-2 w-50 p-1" *ngIf="isSubmitted || (color?.invalid && (color?.dirty || color?.touched))">
+        <ul>
+            <li *ngIf = "color?.errors?.required">Color is Required</li>
+            <li *ngIf = "color?.errors?.pattern">Please Enter Valid Color</li>
+           
+        </ul>
+    </div>
+    </div> -->
+    
+    <div class="mb-3">
+      <label for="color" class="form-label">Color</label>
+      <div class="mb-3 ">
+    
+        <select class="form-select form-select-lg mb-3" formControlName="color" id="color">
+            <option value="" selected>Select Color</option>
+            <option *ngFor="let col of productData?.colors " [ngValue]="col?.color" >
+                {{col?.color}}
+              </option>
+            
+          </select>  
+          
+  </div> 
+  
+  
+  
+  <div class="alert alert-danger mt-2 w-50 p-1" *ngIf="isSubmitted || (color?.invalid && (color?.dirty || color?.touched))">
+        <ul>
+            <li *ngIf = "color?.errors?.required">Color is Required</li>
+        
+           
+        </ul>
+    </div>
+    </div>
+        <button type="submit" class="btn cartBtn">Add To Cart</button>
+      </form>
+    </div>
+      <div class="col-7" >
+        
+        <!-- <div style="background-color: #f0efef;text-align: center;width: 600px;">
+    <img src="http://localhost:3000/images/{{ productData.image }}" alt="" style="width: 40%">
+  </div> -->
+  <div class="card" style="width: 500px;background-color: #f0efef;margin-left: auto;">
+    <img src="http://localhost:3000/images/{{ productData?.image }}" alt="" style="width: 40%;margin: 
+    auto;">
+
+  </div>
+  <div>
+  <!-- <div class="row">
+<button *ngFor="let color of productData.color" [ngStyle]="{'background-color':color}" style="width:20px ;height: 20px;" (click)="colorClick(color)" >
+
+</button>
+  </div> -->
+</div>
+</div>
+</div>
+    </div>

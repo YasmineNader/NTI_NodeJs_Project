@@ -1,0 +1,9 @@
+<div id="allContainer">
+
+<app-navbar *ngIf="getsession.type ==undefined" ></app-navbar> 
+<app-navbar-admin *ngIf="getsession.type=='Admin'"></app-navbar-admin>
+<app-navbar-user *ngIf="getsession.type=='User'"></app-navbar-user>
+<router-outlet></router-outlet>
+<app-footer id="footer"></app-footer>
+
+</div>
